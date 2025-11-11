@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santuário de Zidani & Léo - 1 Mês</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="custom-cursor"></div>
+
+    <!-- Partículas de sangue -->
+    <div id="blood-particles"></div>
+
+    <!-- Controles de áudio -->
+    <div class="audio-controls">
+        <button id="play-pause" class="audio-btn">
+            <i class="fas fa-play"></i>
+        </button>
+        <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
+        <span class="audio-label">Deusa</span>
+    </div>
+
+    <!-- Portal de Entrada -->
+    <section id="portal" class="active-section">
+        <div class="portal-content">
+            <h1 class="portal-title">Zidani & Léo</h1>
+            <p class="portal-subtitle">Um mês, e já sinto que vivi mil mortes por você.</p>
+            <button id="enter-sanctuary" class="portal-btn">Entrar no Santuário</button>
+        </div>
+        <div class="candle-container">
+            <div class="candle">
+                <div class="flame"></div>
+                <div class="wax"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navegação -->
+    <nav id="main-nav" class="hidden">
+        <ul>
+            <li><a href="#cartas" class="nav-link" data-section="cartas">Cartas Que Não Te Enviei</a></li>
+            <li><a href="#reliquias" class="nav-link" data-section="reliquias">Relíquias</a></li>
+            <li><a href="#cicatrizes" class="nav-link" data-section="cicatrizes">Cicatrizes</a></li>
+            <li><a href="#altar" class="nav-link" data-section="altar">Altar</a></li>
+            <li><a href="#levar-comigo" class="nav-link" data-section="levar-comigo">Te Levar Comigo</a></li>
+            <li><a href="#diario" class="nav-link" data-section="diario">Diário de Devaneios</a></li>
+            <li><a href="#contrato" class="nav-link" data-section="contrato">Contrato de Sangue</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seções do Santuário -->
+    <main id="sanctuary" class="hidden">
+        <!-- Cartas Que Não Te Enviei -->
+        <section id="cartas" class="section hidden">
+            <div class="section-header">
+                <h2>Cartas Que Não Te Enviei</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="letters-container">
+                <div class="letter">
+                    <p class="letter-content">Meu amor, escrevo estas palavras com tinta que sangra da minha alma. Cada batida do meu coração é um eco do teu nome, uma oração profana que recito em segredo.</p>
+                    <span class="letter-date">Lua Cheia, 3ª Noite</span>
+                </div>
+                <div class="letter">
+                    <p class="letter-content">Às vezes, sinto que nosso amor é uma faca que nos corta por dentro, mas prefiro essa dor à paz vazia que havia antes de ti. Um mês, e já não me lembro de como era respirar sem o teu ar.</p>
+                    <span class="letter-date">Noite de Tempestade</span>
+                </div>
+                <div class="letter">
+                    <p class="letter-content">Sonho com teus dentes no meu pescoço, com tuas mãos nas minhas costelas. Queria que abrisses meu peito e habitasses ali, onde o sangue ainda é quente e o coração ainda bate apenas para ti.</p>
+                    <span class="letter-date">Madrugada Sombria</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relíquias -->
+        <section id="reliquias" class="section hidden">
+            <div class="section-header">
+                <h2>Relíquias</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="relics-grid">
+                <div class="relic-item">
+                    <div class="relic-icon">🌹</div>
+                    <h3>Rosa Negra</h3>
+                    <p>Primeira flor que murchou em nossas mãos, símbolo de beleza na decadência.</p>
+                </div>
+                <div class="relic-item">
+                    <div class="relic-icon">📖</div>
+                    <h3>Livro de Poemas</h3>
+                    <p>Páginas manchadas de vinho tinto, onde nossas almas se encontraram pela primeira vez.</p>
+                </div>
+                <div class="relic-item">
+                    <div class="relic-icon">🕯️</div>
+                    <h3>Vela Consumida</h3>
+                    <p>Testemunha de nossas confissões noturnas, da chama que nos queima por dentro.</p>
+                </div>
+                <div class="relic-item">
+                    <div class="relic-icon">✉️</div>
+                    <h3>Carta Rasgada</h3>
+                    <p>Palavras que nunca enviei, sentimentos que guardei como segredos preciosos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cicatrizes -->
+        <section id="cicatrizes" class="section hidden">
+            <div class="section-header">
+                <h2>Cicatrizes</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="scars-container">
+                <div class="scar-item">
+                    <h3>Primeiro Olhar</h3>
+                    <p>Quando nossos olhos se encontraram, senti que algo em mim se partia e se reconstruía ao mesmo tempo. Era como se minha alma reconhecesse a tua após séculos de procura.</p>
+                </div>
+                <div class="scar-item">
+                    <h3>Toque Proibido</h3>
+                    <p>Tua mão na minha nuca, um gesto simples que senti como uma marca de fogo. Desde então, carrego a queimadura do teu toque em cada centímetro da minha pele.</p>
+                </div>
+                <div class="scar-item">
+                    <h3>Confissão Ao Sol</h3>
+                    <p>As palavras que trocamos sob o nascer do sol, promessas feitas com o sabor do perigo nos lábios. Naquele momento, nossos destinos se entrelaçaram para sempre.</p>
+                </div>
+                <div class="scar-item">
+                    <h3>Primeira Ferida</h3>
+                    <p>O dia em que percebi que te amar seria também sofrer por ti. E aceitei essa dor como parte do ritual de nos pertencermos completamente.</p>
+                </div>
+                <div class="scar-item">
+                    <h3>Renúncia Mutua</h3>
+                    <p>Quando abdicamos de nossas individualidades para nos tornarmos um só ser, uma entidade com duas almas que pulsam no mesmo ritmo.</p>
+                </div>
+                <div class="scar-item">
+                    <h3>Juramento de Sangue</h3>
+                    <p>O pacto não verbalizado que selou nosso destino. Prometi pertencer-te mesmo depois que meu corpo virar pó e minha voz se calar para sempre.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Altar -->
+        <section id="altar" class="section hidden">
+            <div class="section-header">
+                <h2>Altar</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="altar-text">
+                <p>Como o tempo não apaga o destino de dois corpos destinados. Nestas imagens, nossa essência permanece - almas gêmeas que se reconheceram através das eras.</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <div class="photo-frame" >
+                        <div class="photo-placeholder">[Foto de Zidani e Léo] <img class="photo-frame" src="juntos.jpg" ></div>
+                    </div>
+                    <p>Presente, onde nossos olhares carregam o peso de mil vidas passadas.</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">[Foto de Infância]<img class="photo-frame" src="infancia.jpg" ></div>
+                    </div>
+                    <p>Passado, onde nosso amor é como o olhar gentil de uma criança.</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">[Momento Íntimo] <img class="photo-frame" src="Intimo.jpg" ></div>
+                    </div>
+                    <p>Futuro, que iremos construir com cada respiração compartilhada.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Te Levar Comigo -->
+        <section id="levar-comigo" class="section hidden">
+            <div class="section-header">
+                <h2>Te Levar Comigo</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="take-with-me-container">
+                <div id="poetic-phrase" class="poetic-phrase">
+                    Clique no coração para receber uma confissão
+                </div>
+                <button id="generate-phrase" class="heart-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Diário de Devaneios -->
+        <section id="diario" class="section hidden">
+            <div class="section-header">
+                <h2>Diário de Devaneios</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="diary-container">
+                <div class="diary-entry">
+                    <p class="diary-date">Primeira semana</p>
+                    <p class="diary-content">Sonho que somos duas árvores com raízes entrelaçadas, crescendo uma dentro da outra até não saber onde começa uma e termina a outra.</p>
+                </div>
+                <div class="diary-entry">
+                    <p class="diary-date">Lua Nova</p>
+                    <p class="diary-content">Às vezes tenho medo da intensidade do que sinto. É como se eu tivesse encontrado a peça que faltava em mim, mas essa peça é afiada e me corta por dentro.</p>
+                </div>
+                <div class="diary-entry">
+                    <p class="diary-date">Véspera do primeiro mês</p>
+                    <p class="diary-content">Hoje me peguei pensando que nosso amor é como uma ferida que não quer cicatrizar - dói, mas é a prova de que estamos vivos, de que sentimos algo real.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contrato de Sangue -->
+        <section id="contrato" class="section hidden">
+            <div class="section-header">
+                <h2>Contrato de Sangue</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contract-container">
+                <div class="contract-text">
+                    <p>Eu, Zidani, entrego-te minha alma, meu sangue, meu ser. Prometo amar-te com a intensidade de mil sóis e a escuridão de mil noites.</p>
+                    <p>Neste pacto selado não com tinta, mas com o próprio fluir de nossas veias, juro pertencer-te para além da vida, para além da morte.</p>
+                    <p class="final-phrase">Um mês, e já me tornei teu cadáver feliz.</p>
+                </div>
+                <button id="show-signature" class="signature-btn">Assinar Pacto</button>
+                <div id="signature-container" class="signature-container hidden">
+                    <div class="signature-animation">
+                        <span class="signature-name">Zidani</span>
+                        <span class="signature-heart">❤</span>
+                        <span class="signature-name">Léo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão secreto -->
+    <div id="secret-trigger" class="secret-trigger"></div>
+    <div id="secret-message" class="secret-message hidden">
+        <p>Você descobriu o segredo mais profundo: nosso amor é eterno, mesmo que o mundo inteiro queime.</p>
+        <button id="close-secret">Fechar</button>
+    </div>
+
+    <!-- Áudio -->
+    <audio id="background-music" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <audio id="heartbeat-sound">
+        <source src="https://assets.codepen.io/12345/heartbeat.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="whisper-sound">
+        <source src="https://assets.codepen.io/12345/whisper.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
